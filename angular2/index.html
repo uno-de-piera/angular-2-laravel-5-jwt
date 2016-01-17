@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JWT, Angular 2 y Laravel 5</title>
+</head>
+
+<body>
+<app>Loading...</app>
+</body>
+
+<script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+<script src="/node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="/node_modules/systemjs/dist/system.js"></script>
+<script>
+    System.config({
+        defaultJSExtensions: true,
+        packages           : {
+            "/angular2-jwt": {
+                "defaultExtension": "js"
+            }
+        },
+        map                : {
+            "angular2-jwt": "node_modules/angular2-jwt/angular2-jwt"
+        }
+    });
+</script>
+<script src="/node_modules/rxjs/bundles/Rx.js"></script>
+<script src="/node_modules/angular2/bundles/angular2.min.js"></script>
+<script src="/node_modules/angular2/bundles/http.min.js"></script>
+<script src="/node_modules/angular2/bundles/router.min.js"></script>
+<script src="/node_modules/angular2-jwt/angular2-jwt.js"></script>
+<script>
+    System.import('src/app').catch(console.log.bind(console));
+</script>
+
+</html>

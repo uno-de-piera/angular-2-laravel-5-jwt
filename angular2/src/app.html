@@ -1,0 +1,13 @@
+<h1>JWT, Angular2 y Laravel 5</h1>
+<button *ngIf="!loggedIn()" (click)="login()">Login</button>
+<button *ngIf="loggedIn()" (click)="logout()">Logout</button>
+<hr>
+<div>
+    <button [routerLink]="['./Public']">Public Route</button>
+    <button *ngIf="loggedIn()" [routerLink]="['./Private']">Private Route</button>
+    <router-outlet></router-outlet>
+</div>
+<hr>
+<button *ngIf="loggedIn()" (click)="tokenSubscription()">Show Token from Observable</button>
+<button *ngIf="loggedIn()" (click)="getEmailUserLogged()">Get Email User Logged</button>
+<button *ngIf="loggedIn()" (click)="useJwtHelper()">Jwt Helper Options</button>
